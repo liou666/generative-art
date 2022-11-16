@@ -94,6 +94,15 @@ export default function TiledLine() {
         onClick={() => clickHandler()}
         ref={ref}
       />
+      <div
+        font-mono w='[100%]' mt-3
+        text='left gray-500'
+      >
+        step:
+        {' '}
+        {step[stepIndex]}
+      </div>
+
     </Pager>
   )
 }

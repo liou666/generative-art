@@ -1,6 +1,7 @@
 import type { FC, PropsWithChildren } from 'react'
 import type { PageInfo } from '../works'
 import works from '../works'
+import '@/styles/pager.css'
 
 const Pager: FC<PropsWithChildren> = ({ children }) => {
   const { pathname } = useLocation()
@@ -17,12 +18,26 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div
-      flex-center
+      flex='~ center col'
     >
+      <header
+        text-gray-500
+        absolute
+        top-4
+        left-4
+      >
+        <a
+          href='/'
+          text-2xl
+          icon-btn
+          i-carbon:harbor
+        />
+      </header>
       <div
+        className='link-nav'
         fixed
         bottom-3
-        left-2
+        right-2
         transition-all
         duration-300
         font-mono
@@ -42,7 +57,7 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
         )
         }
         {current && (
-          <div cursor-pointer>
+          <div className='current' cursor-pointer>
             <span font-bold>{current.name}</span>
             <span ml-2>{current.no}</span>
           </div>
