@@ -2,8 +2,8 @@ export default function Footer() {
   const [, toggle] = useDark()
   return (
     <nav
-      inline-flex gap-2
-      text-xl mt-6
+      flex-center gap-2
+      text-xl m-6
     >
       <a
         i-carbon:logo-github

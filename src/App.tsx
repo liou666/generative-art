@@ -6,11 +6,15 @@ export default function App() {
   return (
     <main
       font-sans p='x-4 y-10'
+      h-100vh
+      flex='~ col'
       text='center gray-700 dark:gray-200'
     >
-      <Suspense fallback={<div>Loading...</div>}>
-        {useRoutes(routes)}
-      </Suspense>
+      <div flex='1 center'>
+        <Suspense fallback={<div>Loading...</div>}>
+          {useRoutes(routes)}
+        </Suspense>
+      </div>
       <Footer />
     </main>
   )

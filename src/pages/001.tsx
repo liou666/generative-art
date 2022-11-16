@@ -1,4 +1,5 @@
 import { suffix } from '@/utils'
+import Pager from '@/components/Pager'
 
 export default function TiledLine() {
   const ref = useRef<HTMLCanvasElement>(null)
@@ -86,16 +87,14 @@ export default function TiledLine() {
   }, [init])
 
   return (
-    <div
-      flex-center
-    >
+    <Pager>
       <canvas
         border-album
         p-10
         onClick={() => clickHandler()}
         ref={ref}
       />
-    </div>
+    </Pager>
   )
 }
 
