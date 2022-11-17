@@ -1,7 +1,6 @@
 import type { FC, PropsWithChildren } from 'react'
 import type { PageInfo } from '../works'
 import works from '../works'
-import '@/styles/pager.css'
 
 const Pager: FC<PropsWithChildren> = ({ children }) => {
   const { pathname } = useLocation()
@@ -34,22 +33,12 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
         />
       </header>
       <div
-        className='link-nav'
-        fixed
-        bottom-3
-        right-2
-        transition-all
-        duration-300
-        font-mono
+        className='custom-link-nav group'
       >
         {pre && (
           <a
-            text='gray-400 hover:gray-5 hover:dark:gray-3'
-            duration-300
-            font='thin'
-            className='pre'
+            className='pre-next-link'
             href={`/${pre.no}`}
-            cursor='pointer'
           >
             <span>{pre.name}</span>
             <span inline-block ml-2>{pre.no}</span>
@@ -57,7 +46,7 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
         )
         }
         {current && (
-          <div className='current' cursor-pointer>
+          <div cursor-pointer>
             <span font-bold>{current.name}</span>
             <span ml-2>{current.no}</span>
           </div>
@@ -65,12 +54,8 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
         }
         {next && (
           <a
-            text='gray-400 hover:gray-5 hover:dark:gray-3'
-            font='thin'
-            duration-300
-            className='next'
+            className='pre-next-link'
             href={`/${next.no}`}
-            cursor='pointer'
           >
             <span>{next.name}</span>
             <span ml-2>{next.no}</span>
