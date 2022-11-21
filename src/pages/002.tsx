@@ -1,8 +1,13 @@
 import Pager from '@/components/Pager'
 
+interface Point{
+  x: number
+  y: number
+}
+
 export default function Wave() {
   const [ref, ctx] = useInitCanvas({ isScale: false })
-  const { pendingTask, startFrame } = useFrame()
+  const { pendingTask, startFrame, stopFrame } = useFrame()
   const step = 12
 
   function genData(step: number) {
@@ -23,7 +28,7 @@ export default function Wave() {
     return lines
   }
 
-  function draw(line: { x: number; y: number }[]) {
+  function draw(line: Point[]) {
     const c = ctx.current!
     c.beginPath()
     c.moveTo(line[0].x, line[0].y)
@@ -40,6 +45,7 @@ export default function Wave() {
   }
 
   function start() {
+    stopFrame()
     const c = ctx.current!
     const { width, height } = c.canvas
     c.clearRect(0, 0, width, height)
