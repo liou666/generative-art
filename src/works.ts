@@ -4,13 +4,10 @@ export interface PageInfo {
 }
 export const info = [
   {
-    name: 'TiledLine1',
+    name: 'TiledLine',
   },
   {
-    name: 'TiledLine2',
-  },
-  {
-    name: 'TiledLine3',
+    name: 'Wave',
   },
 ]
 

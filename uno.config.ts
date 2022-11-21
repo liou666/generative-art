@@ -11,7 +11,7 @@ export default defineConfig({
       'cursor-pointer block text-gray-400 text-hover:gray-5 text-hover:dark:gray-3 font-thin transition-all duration-300 opacity-0 mt-[-1.5rem] group-hover:opacity-100 group-hover:mt-0',
     ],
 
-    ['custom-link-nav', 'fixed bottom-3 right-2 font-mono group text-right'],
+    ['custom-link-nav', 'fixed bottom-3 right-2 font-mono text-right'],
   ],
   presets: [
     presetUno(),
