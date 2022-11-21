@@ -9,6 +9,9 @@ export const info = [
   {
     name: 'Wave',
   },
+  {
+    name: 'TriangularMesh',
+  },
 ]
 
 export default info.map((info, idx) => {
