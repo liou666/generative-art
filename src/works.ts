@@ -10,10 +10,10 @@ export const info = [
     name: 'Wave',
   },
   {
-    name: 'TriangularMesh',
+    name: 'Mesh',
   },
   {
-    name: 'CubicDisarray',
+    name: 'Cubic',
   },
 ]
 

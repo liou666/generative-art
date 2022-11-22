@@ -1,26 +1,39 @@
+import works from '../works'
+
 const IndexPage = () => {
-  const navigate = useNavigate()
   return (
-    <div>
+    <div
+      font-mono
+      p-6
+    >
       <h1
-        text='4xl md:5xl lg:7xl'
+        text='3xl md:4xl lg:5xl left'
         animate-bounce
       >
         Generative Artistry
       </h1>
       <div m-10 />
-      <button
-        border
-        p='x-8 y-2'
-        md='px-10 py-3'
-        lg='px-16 py-4'
-        hover='shadow-sm dark:shadow-orange'
-        duration-300
-        transition-all
-        onClick={() => navigate('/001')}
+      <section
+        text='left lg'
+        grid='cols-1 ~ sm:cols-3  gap-2 items-start '
+        place-content-start
+        max-h-360px
+        overflow-auto
       >
-        Get Start
-      </button>
+        {
+          works.map((w) => {
+            return (
+              <a
+                text='gray-4 dark:gray-500 hover:gray-500 hover:dark:gray-4'
+                href={`/${w.no}`} cursor-pointer
+                key={w.no}
+              >
+                {`${w.no} ${w.name} `}
+              </a>
+            )
+          })
+        }
+      </section>
     </div>
   )
 }
