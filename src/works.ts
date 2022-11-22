@@ -12,6 +12,9 @@ export const info = [
   {
     name: 'TriangularMesh',
   },
+  {
+    name: 'CubicDisarray',
+  },
 ]
 
 export default info.map((info, idx) => {
