@@ -13,9 +13,11 @@ specifiers:
   classnames: ^2.3.2
   eslint: ^8.26.0
   jsdom: ^20.0.0
+  playwright: ^1.28.0
   react: ^18.2.0
   react-dom: ^18.2.0
   react-router-dom: ^6.4.3
+  tsx: ^3.12.1
   typescript: ^4.6.4
   unocss: ^0.46.5
   unplugin-auto-import: ^0.11.4
@@ -41,6 +43,8 @@ devDependencies:
   '@vitejs/plugin-react': 2.2.0_vite@3.2.3
   eslint: 8.27.0
   jsdom: 20.0.2
+  playwright: registry.npmjs.org/playwright/1.28.0
+  tsx: registry.npmjs.org/tsx/3.12.1
   typescript: 4.8.4
   unocss: 0.46.5_vite@3.2.3
   unplugin-auto-import: 0.11.4
@@ -338,24 +342,6 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
     dev: true
-
-  /@esbuild/android-arm/0.15.13:
-    resolution: {integrity: sha512-RY2fVI8O0iFUNvZirXaQ1vMvK0xhCcl0gqRj74Z6yEiO1zAUa7hbsdwZM1kzqbxHK7LFyMizipfXT3JME+12Hw==}
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@esbuild/linux-loong64/0.15.13:
-    resolution: {integrity: sha512-+BoyIm4I8uJmH/QDIH0fu7MG0AEx9OXEDXnqptXCwKOlOqZiS4iraH1Nr7/ObLMokW3sOCeBNyD68ATcV9b9Ag==}
-    engines: {node: '>=12'}
-    cpu: [loong64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /@eslint/eslintrc/1.3.3:
     resolution: {integrity: sha512-uj3pT6Mg+3t39fvLrj8iuCIJ38zKO9FpGtJ4BBJebJhEwjoT+KLVNCcHT5QC9NGRIEi7fZ0ZR8YRb884auB4Lg==}
@@ -1287,7 +1273,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
 
   /ci-info/3.5.0:
@@ -1624,214 +1610,34 @@ packages:
       is-symbol: 1.0.4
     dev: true
 
-  /esbuild-android-64/0.15.13:
-    resolution: {integrity: sha512-yRorukXBlokwTip+Sy4MYskLhJsO0Kn0/Fj43s1krVblfwP+hMD37a4Wmg139GEsMLl+vh8WXp2mq/cTA9J97g==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-android-arm64/0.15.13:
-    resolution: {integrity: sha512-TKzyymLD6PiVeyYa4c5wdPw87BeAiTXNtK6amWUcXZxkV51gOk5u5qzmDaYSwiWeecSNHamFsaFjLoi32QR5/w==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-darwin-64/0.15.13:
-    resolution: {integrity: sha512-WAx7c2DaOS6CrRcoYCgXgkXDliLnFv3pQLV6GeW1YcGEZq2Gnl8s9Pg7ahValZkpOa0iE/ojRVQ87sbUhF1Cbg==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-darwin-arm64/0.15.13:
-    resolution: {integrity: sha512-U6jFsPfSSxC3V1CLiQqwvDuj3GGrtQNB3P3nNC3+q99EKf94UGpsG9l4CQ83zBs1NHrk1rtCSYT0+KfK5LsD8A==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-freebsd-64/0.15.13:
-    resolution: {integrity: sha512-whItJgDiOXaDG/idy75qqevIpZjnReZkMGCgQaBWZuKHoElDJC1rh7MpoUgupMcdfOd+PgdEwNQW9DAE6i8wyA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-freebsd-arm64/0.15.13:
-    resolution: {integrity: sha512-6pCSWt8mLUbPtygv7cufV0sZLeylaMwS5Fznj6Rsx9G2AJJsAjQ9ifA+0rQEIg7DwJmi9it+WjzNTEAzzdoM3Q==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-32/0.15.13:
-    resolution: {integrity: sha512-VbZdWOEdrJiYApm2kkxoTOgsoCO1krBZ3quHdYk3g3ivWaMwNIVPIfEE0f0XQQ0u5pJtBsnk2/7OPiCFIPOe/w==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-64/0.15.13:
-    resolution: {integrity: sha512-rXmnArVNio6yANSqDQlIO4WiP+Cv7+9EuAHNnag7rByAqFVuRusLbGi2697A5dFPNXoO//IiogVwi3AdcfPC6A==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-arm/0.15.13:
-    resolution: {integrity: sha512-Ac6LpfmJO8WhCMQmO253xX2IU2B3wPDbl4IvR0hnqcPrdfCaUa2j/lLMGTjmQ4W5JsJIdHEdW12dG8lFS0MbxQ==}
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-arm64/0.15.13:
-    resolution: {integrity: sha512-alEMGU4Z+d17U7KQQw2IV8tQycO6T+rOrgW8OS22Ua25x6kHxoG6Ngry6Aq6uranC+pNWNMB6aHFPh7aTQdORQ==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-mips64le/0.15.13:
-    resolution: {integrity: sha512-47PgmyYEu+yN5rD/MbwS6DxP2FSGPo4Uxg5LwIdxTiyGC2XKwHhHyW7YYEDlSuXLQXEdTO7mYe8zQ74czP7W8A==}
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-ppc64le/0.15.13:
-    resolution: {integrity: sha512-z6n28h2+PC1Ayle9DjKoBRcx/4cxHoOa2e689e2aDJSaKug3jXcQw7mM+GLg+9ydYoNzj8QxNL8ihOv/OnezhA==}
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-riscv64/0.15.13:
-    resolution: {integrity: sha512-+Lu4zuuXuQhgLUGyZloWCqTslcCAjMZH1k3Xc9MSEJEpEFdpsSU0sRDXAnk18FKOfEjhu4YMGaykx9xjtpA6ow==}
-    engines: {node: '>=12'}
-    cpu: [riscv64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-s390x/0.15.13:
-    resolution: {integrity: sha512-BMeXRljruf7J0TMxD5CIXS65y7puiZkAh+s4XFV9qy16SxOuMhxhVIXYLnbdfLrsYGFzx7U9mcdpFWkkvy/Uag==}
-    engines: {node: '>=12'}
-    cpu: [s390x]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-netbsd-64/0.15.13:
-    resolution: {integrity: sha512-EHj9QZOTel581JPj7UO3xYbltFTYnHy+SIqJVq6yd3KkCrsHRbapiPb0Lx3EOOtybBEE9EyqbmfW1NlSDsSzvQ==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [netbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-openbsd-64/0.15.13:
-    resolution: {integrity: sha512-nkuDlIjF/sfUhfx8SKq0+U+Fgx5K9JcPq1mUodnxI0x4kBdCv46rOGWbuJ6eof2n3wdoCLccOoJAbg9ba/bT2w==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [openbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-sunos-64/0.15.13:
-    resolution: {integrity: sha512-jVeu2GfxZQ++6lRdY43CS0Tm/r4WuQQ0Pdsrxbw+aOrHQPHV0+LNOLnvbN28M7BSUGnJnHkHm2HozGgNGyeIRw==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [sunos]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-32/0.15.13:
-    resolution: {integrity: sha512-XoF2iBf0wnqo16SDq+aDGi/+QbaLFpkiRarPVssMh9KYbFNCqPLlGAWwDvxEVz+ywX6Si37J2AKm+AXq1kC0JA==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-64/0.15.13:
-    resolution: {integrity: sha512-Et6htEfGycjDrtqb2ng6nT+baesZPYQIW+HUEHK4D1ncggNrDNk3yoboYQ5KtiVrw/JaDMNttz8rrPubV/fvPQ==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-arm64/0.15.13:
-    resolution: {integrity: sha512-3bv7tqntThQC9SWLRouMDmZnlOukBhOCTlkzNqzGCmrkCJI7io5LLjwJBOVY6kOUlIvdxbooNZwjtBvj+7uuVg==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /esbuild/0.15.13:
     resolution: {integrity: sha512-Cu3SC84oyzzhrK/YyN4iEVy2jZu5t2fz66HEOShHURcjSkOSAVL8C/gfUT+lDJxkVHpg8GZ10DD0rMHRPqMFaQ==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@esbuild/android-arm': 0.15.13
-      '@esbuild/linux-loong64': 0.15.13
-      esbuild-android-64: 0.15.13
-      esbuild-android-arm64: 0.15.13
-      esbuild-darwin-64: 0.15.13
-      esbuild-darwin-arm64: 0.15.13
-      esbuild-freebsd-64: 0.15.13
-      esbuild-freebsd-arm64: 0.15.13
-      esbuild-linux-32: 0.15.13
-      esbuild-linux-64: 0.15.13
-      esbuild-linux-arm: 0.15.13
-      esbuild-linux-arm64: 0.15.13
-      esbuild-linux-mips64le: 0.15.13
-      esbuild-linux-ppc64le: 0.15.13
-      esbuild-linux-riscv64: 0.15.13
-      esbuild-linux-s390x: 0.15.13
-      esbuild-netbsd-64: 0.15.13
-      esbuild-openbsd-64: 0.15.13
-      esbuild-sunos-64: 0.15.13
-      esbuild-windows-32: 0.15.13
-      esbuild-windows-64: 0.15.13
-      esbuild-windows-arm64: 0.15.13
+      '@esbuild/android-arm': registry.npmjs.org/@esbuild/android-arm/0.15.13
+      '@esbuild/linux-loong64': registry.npmjs.org/@esbuild/linux-loong64/0.15.13
+      esbuild-android-64: registry.npmjs.org/esbuild-android-64/0.15.13
+      esbuild-android-arm64: registry.npmjs.org/esbuild-android-arm64/0.15.13
+      esbuild-darwin-64: registry.npmjs.org/esbuild-darwin-64/0.15.13
+      esbuild-darwin-arm64: registry.npmjs.org/esbuild-darwin-arm64/0.15.13
+      esbuild-freebsd-64: registry.npmjs.org/esbuild-freebsd-64/0.15.13
+      esbuild-freebsd-arm64: registry.npmjs.org/esbuild-freebsd-arm64/0.15.13
+      esbuild-linux-32: registry.npmjs.org/esbuild-linux-32/0.15.13
+      esbuild-linux-64: registry.npmjs.org/esbuild-linux-64/0.15.13
+      esbuild-linux-arm: registry.npmjs.org/esbuild-linux-arm/0.15.13
+      esbuild-linux-arm64: registry.npmjs.org/esbuild-linux-arm64/0.15.13
+      esbuild-linux-mips64le: registry.npmjs.org/esbuild-linux-mips64le/0.15.13
+      esbuild-linux-ppc64le: registry.npmjs.org/esbuild-linux-ppc64le/0.15.13
+      esbuild-linux-riscv64: registry.npmjs.org/esbuild-linux-riscv64/0.15.13
+      esbuild-linux-s390x: registry.npmjs.org/esbuild-linux-s390x/0.15.13
+      esbuild-netbsd-64: registry.npmjs.org/esbuild-netbsd-64/0.15.13
+      esbuild-openbsd-64: registry.npmjs.org/esbuild-openbsd-64/0.15.13
+      esbuild-sunos-64: registry.npmjs.org/esbuild-sunos-64/0.15.13
+      esbuild-windows-32: registry.npmjs.org/esbuild-windows-32/0.15.13
+      esbuild-windows-64: registry.npmjs.org/esbuild-windows-64/0.15.13
+      esbuild-windows-arm64: registry.npmjs.org/esbuild-windows-arm64/0.15.13
     dev: true
 
   /escalade/3.1.1:
@@ -1864,7 +1670,7 @@ packages:
       esutils: 2.0.3
       optionator: 0.8.3
     optionalDependencies:
-      source-map: 0.6.1
+      source-map: registry.npmjs.org/source-map/0.6.1
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -2405,14 +2211,6 @@ packages:
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
-
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
@@ -3651,7 +3449,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
 
   /run-parallel/1.2.0:
@@ -4200,7 +3998,7 @@ packages:
       resolve: 1.22.1
       rollup: 2.79.1
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
 
   /vitest/0.25.1_jsdom@20.0.2:
@@ -4381,4 +4179,375 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  registry.npmjs.org/@esbuild-kit/cjs-loader/2.4.1:
+    resolution: {integrity: sha512-lhc/XLith28QdW0HpHZvZKkorWgmCNT7sVelMHDj3HFdTfdqkwEKvT+aXVQtNAmCC39VJhunDkWhONWB7335mg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild-kit/cjs-loader/-/cjs-loader-2.4.1.tgz}
+    name: '@esbuild-kit/cjs-loader'
+    version: 2.4.1
+    dependencies:
+      '@esbuild-kit/core-utils': registry.npmjs.org/@esbuild-kit/core-utils/3.0.0
+      get-tsconfig: registry.npmjs.org/get-tsconfig/4.2.0
+    dev: true
+
+  registry.npmjs.org/@esbuild-kit/core-utils/3.0.0:
+    resolution: {integrity: sha512-TXmwH9EFS3DC2sI2YJWJBgHGhlteK0Xyu1VabwetMULfm3oYhbrsWV5yaSr2NTWZIgDGVLHbRf0inxbjXqAcmQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild-kit/core-utils/-/core-utils-3.0.0.tgz}
+    name: '@esbuild-kit/core-utils'
+    version: 3.0.0
+    dependencies:
+      esbuild: registry.npmjs.org/esbuild/0.15.13
+      source-map-support: registry.npmjs.org/source-map-support/0.5.21
+    dev: true
+
+  registry.npmjs.org/@esbuild-kit/esm-loader/2.5.0:
+    resolution: {integrity: sha512-ySs0qOsiwj+hsgZM9/MniGdvfa9/WzqfFuIia8/5gSUPeIQIX2/tG91QakxPFOR35VFiwTB7wCiHtiS6dc6SkA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild-kit/esm-loader/-/esm-loader-2.5.0.tgz}
+    name: '@esbuild-kit/esm-loader'
+    version: 2.5.0
+    dependencies:
+      '@esbuild-kit/core-utils': registry.npmjs.org/@esbuild-kit/core-utils/3.0.0
+      get-tsconfig: registry.npmjs.org/get-tsconfig/4.2.0
+    dev: true
+
+  registry.npmjs.org/@esbuild/android-arm/0.15.13:
+    resolution: {integrity: sha512-RY2fVI8O0iFUNvZirXaQ1vMvK0xhCcl0gqRj74Z6yEiO1zAUa7hbsdwZM1kzqbxHK7LFyMizipfXT3JME+12Hw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.15.13.tgz}
+    name: '@esbuild/android-arm'
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/@esbuild/linux-loong64/0.15.13:
+    resolution: {integrity: sha512-+BoyIm4I8uJmH/QDIH0fu7MG0AEx9OXEDXnqptXCwKOlOqZiS4iraH1Nr7/ObLMokW3sOCeBNyD68ATcV9b9Ag==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.15.13.tgz}
+    name: '@esbuild/linux-loong64'
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/buffer-from/1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz}
+    name: buffer-from
+    version: 1.1.2
+    dev: true
+
+  registry.npmjs.org/esbuild-android-64/0.15.13:
+    resolution: {integrity: sha512-yRorukXBlokwTip+Sy4MYskLhJsO0Kn0/Fj43s1krVblfwP+hMD37a4Wmg139GEsMLl+vh8WXp2mq/cTA9J97g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-android-64/-/esbuild-android-64-0.15.13.tgz}
+    name: esbuild-android-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-android-arm64/0.15.13:
+    resolution: {integrity: sha512-TKzyymLD6PiVeyYa4c5wdPw87BeAiTXNtK6amWUcXZxkV51gOk5u5qzmDaYSwiWeecSNHamFsaFjLoi32QR5/w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-android-arm64/-/esbuild-android-arm64-0.15.13.tgz}
+    name: esbuild-android-arm64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-darwin-64/0.15.13:
+    resolution: {integrity: sha512-WAx7c2DaOS6CrRcoYCgXgkXDliLnFv3pQLV6GeW1YcGEZq2Gnl8s9Pg7ahValZkpOa0iE/ojRVQ87sbUhF1Cbg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.15.13.tgz}
+    name: esbuild-darwin-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-darwin-arm64/0.15.13:
+    resolution: {integrity: sha512-U6jFsPfSSxC3V1CLiQqwvDuj3GGrtQNB3P3nNC3+q99EKf94UGpsG9l4CQ83zBs1NHrk1rtCSYT0+KfK5LsD8A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.13.tgz}
+    name: esbuild-darwin-arm64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-freebsd-64/0.15.13:
+    resolution: {integrity: sha512-whItJgDiOXaDG/idy75qqevIpZjnReZkMGCgQaBWZuKHoElDJC1rh7MpoUgupMcdfOd+PgdEwNQW9DAE6i8wyA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-freebsd-64/-/esbuild-freebsd-64-0.15.13.tgz}
+    name: esbuild-freebsd-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-freebsd-arm64/0.15.13:
+    resolution: {integrity: sha512-6pCSWt8mLUbPtygv7cufV0sZLeylaMwS5Fznj6Rsx9G2AJJsAjQ9ifA+0rQEIg7DwJmi9it+WjzNTEAzzdoM3Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.15.13.tgz}
+    name: esbuild-freebsd-arm64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-32/0.15.13:
+    resolution: {integrity: sha512-VbZdWOEdrJiYApm2kkxoTOgsoCO1krBZ3quHdYk3g3ivWaMwNIVPIfEE0f0XQQ0u5pJtBsnk2/7OPiCFIPOe/w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-32/-/esbuild-linux-32-0.15.13.tgz}
+    name: esbuild-linux-32
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-64/0.15.13:
+    resolution: {integrity: sha512-rXmnArVNio6yANSqDQlIO4WiP+Cv7+9EuAHNnag7rByAqFVuRusLbGi2697A5dFPNXoO//IiogVwi3AdcfPC6A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz}
+    name: esbuild-linux-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-arm/0.15.13:
+    resolution: {integrity: sha512-Ac6LpfmJO8WhCMQmO253xX2IU2B3wPDbl4IvR0hnqcPrdfCaUa2j/lLMGTjmQ4W5JsJIdHEdW12dG8lFS0MbxQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-arm/-/esbuild-linux-arm-0.15.13.tgz}
+    name: esbuild-linux-arm
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-arm64/0.15.13:
+    resolution: {integrity: sha512-alEMGU4Z+d17U7KQQw2IV8tQycO6T+rOrgW8OS22Ua25x6kHxoG6Ngry6Aq6uranC+pNWNMB6aHFPh7aTQdORQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-arm64/-/esbuild-linux-arm64-0.15.13.tgz}
+    name: esbuild-linux-arm64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-mips64le/0.15.13:
+    resolution: {integrity: sha512-47PgmyYEu+yN5rD/MbwS6DxP2FSGPo4Uxg5LwIdxTiyGC2XKwHhHyW7YYEDlSuXLQXEdTO7mYe8zQ74czP7W8A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.15.13.tgz}
+    name: esbuild-linux-mips64le
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-ppc64le/0.15.13:
+    resolution: {integrity: sha512-z6n28h2+PC1Ayle9DjKoBRcx/4cxHoOa2e689e2aDJSaKug3jXcQw7mM+GLg+9ydYoNzj8QxNL8ihOv/OnezhA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.15.13.tgz}
+    name: esbuild-linux-ppc64le
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-riscv64/0.15.13:
+    resolution: {integrity: sha512-+Lu4zuuXuQhgLUGyZloWCqTslcCAjMZH1k3Xc9MSEJEpEFdpsSU0sRDXAnk18FKOfEjhu4YMGaykx9xjtpA6ow==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.15.13.tgz}
+    name: esbuild-linux-riscv64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-linux-s390x/0.15.13:
+    resolution: {integrity: sha512-BMeXRljruf7J0TMxD5CIXS65y7puiZkAh+s4XFV9qy16SxOuMhxhVIXYLnbdfLrsYGFzx7U9mcdpFWkkvy/Uag==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-linux-s390x/-/esbuild-linux-s390x-0.15.13.tgz}
+    name: esbuild-linux-s390x
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-netbsd-64/0.15.13:
+    resolution: {integrity: sha512-EHj9QZOTel581JPj7UO3xYbltFTYnHy+SIqJVq6yd3KkCrsHRbapiPb0Lx3EOOtybBEE9EyqbmfW1NlSDsSzvQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-netbsd-64/-/esbuild-netbsd-64-0.15.13.tgz}
+    name: esbuild-netbsd-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-openbsd-64/0.15.13:
+    resolution: {integrity: sha512-nkuDlIjF/sfUhfx8SKq0+U+Fgx5K9JcPq1mUodnxI0x4kBdCv46rOGWbuJ6eof2n3wdoCLccOoJAbg9ba/bT2w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-openbsd-64/-/esbuild-openbsd-64-0.15.13.tgz}
+    name: esbuild-openbsd-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-sunos-64/0.15.13:
+    resolution: {integrity: sha512-jVeu2GfxZQ++6lRdY43CS0Tm/r4WuQQ0Pdsrxbw+aOrHQPHV0+LNOLnvbN28M7BSUGnJnHkHm2HozGgNGyeIRw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-sunos-64/-/esbuild-sunos-64-0.15.13.tgz}
+    name: esbuild-sunos-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-windows-32/0.15.13:
+    resolution: {integrity: sha512-XoF2iBf0wnqo16SDq+aDGi/+QbaLFpkiRarPVssMh9KYbFNCqPLlGAWwDvxEVz+ywX6Si37J2AKm+AXq1kC0JA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-windows-32/-/esbuild-windows-32-0.15.13.tgz}
+    name: esbuild-windows-32
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-windows-64/0.15.13:
+    resolution: {integrity: sha512-Et6htEfGycjDrtqb2ng6nT+baesZPYQIW+HUEHK4D1ncggNrDNk3yoboYQ5KtiVrw/JaDMNttz8rrPubV/fvPQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz}
+    name: esbuild-windows-64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild-windows-arm64/0.15.13:
+    resolution: {integrity: sha512-3bv7tqntThQC9SWLRouMDmZnlOukBhOCTlkzNqzGCmrkCJI7io5LLjwJBOVY6kOUlIvdxbooNZwjtBvj+7uuVg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild-windows-arm64/-/esbuild-windows-arm64-0.15.13.tgz}
+    name: esbuild-windows-arm64
+    version: 0.15.13
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/esbuild/0.15.13:
+    resolution: {integrity: sha512-Cu3SC84oyzzhrK/YyN4iEVy2jZu5t2fz66HEOShHURcjSkOSAVL8C/gfUT+lDJxkVHpg8GZ10DD0rMHRPqMFaQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/esbuild/-/esbuild-0.15.13.tgz}
+    name: esbuild
+    version: 0.15.13
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@esbuild/android-arm': registry.npmjs.org/@esbuild/android-arm/0.15.13
+      '@esbuild/linux-loong64': registry.npmjs.org/@esbuild/linux-loong64/0.15.13
+      esbuild-android-64: registry.npmjs.org/esbuild-android-64/0.15.13
+      esbuild-android-arm64: registry.npmjs.org/esbuild-android-arm64/0.15.13
+      esbuild-darwin-64: registry.npmjs.org/esbuild-darwin-64/0.15.13
+      esbuild-darwin-arm64: registry.npmjs.org/esbuild-darwin-arm64/0.15.13
+      esbuild-freebsd-64: registry.npmjs.org/esbuild-freebsd-64/0.15.13
+      esbuild-freebsd-arm64: registry.npmjs.org/esbuild-freebsd-arm64/0.15.13
+      esbuild-linux-32: registry.npmjs.org/esbuild-linux-32/0.15.13
+      esbuild-linux-64: registry.npmjs.org/esbuild-linux-64/0.15.13
+      esbuild-linux-arm: registry.npmjs.org/esbuild-linux-arm/0.15.13
+      esbuild-linux-arm64: registry.npmjs.org/esbuild-linux-arm64/0.15.13
+      esbuild-linux-mips64le: registry.npmjs.org/esbuild-linux-mips64le/0.15.13
+      esbuild-linux-ppc64le: registry.npmjs.org/esbuild-linux-ppc64le/0.15.13
+      esbuild-linux-riscv64: registry.npmjs.org/esbuild-linux-riscv64/0.15.13
+      esbuild-linux-s390x: registry.npmjs.org/esbuild-linux-s390x/0.15.13
+      esbuild-netbsd-64: registry.npmjs.org/esbuild-netbsd-64/0.15.13
+      esbuild-openbsd-64: registry.npmjs.org/esbuild-openbsd-64/0.15.13
+      esbuild-sunos-64: registry.npmjs.org/esbuild-sunos-64/0.15.13
+      esbuild-windows-32: registry.npmjs.org/esbuild-windows-32/0.15.13
+      esbuild-windows-64: registry.npmjs.org/esbuild-windows-64/0.15.13
+      esbuild-windows-arm64: registry.npmjs.org/esbuild-windows-arm64/0.15.13
+    dev: true
+
+  registry.npmjs.org/fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmjs.org/get-tsconfig/4.2.0:
+    resolution: {integrity: sha512-X8u8fREiYOE6S8hLbq99PeykTDoLVnxvF4DjWKJmz9xy2nNRdUcV8ZN9tniJFeKyTU3qnC9lL8n4Chd6LmVKHg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.2.0.tgz}
+    name: get-tsconfig
+    version: 4.2.0
+    dev: true
+
+  registry.npmjs.org/playwright-core/1.28.0:
+    resolution: {integrity: sha512-nJLknd28kPBiCNTbqpu6Wmkrh63OEqJSFw9xOfL9qxfNwody7h6/L3O2dZoWQ6Oxcm0VOHjWmGiCUGkc0X3VZA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/playwright-core/-/playwright-core-1.28.0.tgz}
+    name: playwright-core
+    version: 1.28.0
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
+  registry.npmjs.org/playwright/1.28.0:
+    resolution: {integrity: sha512-kyOXGc5y1mgi+hgEcCIyE1P1+JumLrxS09nFHo5sdJNzrucxPRAGwM4A2X3u3SDOfdgJqx61yIoR6Av+5plJPg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/playwright/-/playwright-1.28.0.tgz}
+    name: playwright
+    version: 1.28.0
+    engines: {node: '>=14'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: registry.npmjs.org/playwright-core/1.28.0
+    dev: true
+
+  registry.npmjs.org/source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz}
+    name: source-map-support
+    version: 0.5.21
+    dependencies:
+      buffer-from: registry.npmjs.org/buffer-from/1.1.2
+      source-map: registry.npmjs.org/source-map/0.6.1
+    dev: true
+
+  registry.npmjs.org/source-map/0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz}
+    name: source-map
+    version: 0.6.1
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  registry.npmjs.org/tsx/3.12.1:
+    resolution: {integrity: sha512-Rcg1x+rNe7qwlP8j7kx4VjP/pJo/V57k+17hlrn6a7FuQLNwkaw5W4JF75tYornNVCxkXdSUnqlIT8JY/ttvIw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/tsx/-/tsx-3.12.1.tgz}
+    name: tsx
+    version: 3.12.1
+    hasBin: true
+    dependencies:
+      '@esbuild-kit/cjs-loader': registry.npmjs.org/@esbuild-kit/cjs-loader/2.4.1
+      '@esbuild-kit/core-utils': registry.npmjs.org/@esbuild-kit/core-utils/3.0.0
+      '@esbuild-kit/esm-loader': registry.npmjs.org/@esbuild-kit/esm-loader/2.5.0
+    optionalDependencies:
+      fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
