@@ -41,12 +41,9 @@ export default function TiledLine() {
       setStepIndex(0)
     else
       setStepIndex(stepIndex + 1)
-    start()
   }
 
-  useMount(() => {
-    start()
-  })
+  useEffect(start, [stepIndex])
 
   return (
     <Pager>

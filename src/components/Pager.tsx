@@ -18,6 +18,7 @@ const Pager: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       flex='~ center col'
+      select-none
     >
       <header
         text-gray-500
