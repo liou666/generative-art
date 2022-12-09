@@ -15,6 +15,9 @@ export const info = [
   {
     name: 'Cubic',
   },
+  {
+    name: 'Deux',
+  },
 ]
 
 export default info.map((info, idx) => {
