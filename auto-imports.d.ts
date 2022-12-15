@@ -70,6 +70,7 @@ declare global {
   const useMediaQuery: typeof import('./src/hooks/useMediaQuery')['default']
   const useMemo: typeof import('react')['useMemo']
   const useMemoizedFn: typeof import('ahooks')['useMemoizedFn']
+  const useMonitor: typeof import('./src/hooks/useMonitor')['default']
   const useMount: typeof import('ahooks')['useMount']
   const useMouse: typeof import('ahooks')['useMouse']
   const useMutationObserver: typeof import('ahooks')['useMutationObserver']

@@ -3,6 +3,8 @@ import Pager from '@/components/Pager'
 export default function Spirograph() {
   const [ref, ctx] = useInitCanvas({ isScale: false })
   const [ratioIndex, setRatioIndex] = useState<number>(0)
+  const s = useMonitor()
+
   const ratio = [50, 100, 500]
 
   function draw(radius1: number, radius2: number, ratio: number) {
@@ -24,7 +26,7 @@ export default function Spirograph() {
     const c = ctx.current!
     const { width: size } = c.canvas
     c.clearRect(0, 0, size, size)
-    draw(100, 50, ratio[ratioIndex])
+    draw(s.width < 610 ? 80 : 100, 50, ratio[ratioIndex])
   }
 
   function clickHandler() {
