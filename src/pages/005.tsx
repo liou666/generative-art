@@ -10,7 +10,7 @@ export default function Deux() {
   const { pendingTask, startFrame, stopFrame } = useFrame({ isSuffix: false })
   const [stepIndex, setStepIndex] = useState<number>(0)
 
-  const steps = [5, 10, 15, 20]
+  const steps = [20, 15, 10, 5]
 
   function draw({ x, y }: Point, width: number, height: number, position: number[]) {
     const c = ctx.current!
