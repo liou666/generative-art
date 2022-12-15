@@ -26,7 +26,7 @@ export default function Spirograph() {
     const c = ctx.current!
     const { width: size } = c.canvas
     c.clearRect(0, 0, size, size)
-    draw(s.width < 610 ? 80 : 100, 50, ratio[ratioIndex])
+    draw(s.width < 610 ? 60 : 100, 50, ratio[ratioIndex])
   }
 
   function clickHandler() {

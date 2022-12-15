@@ -8,7 +8,11 @@ function useInitCanvas({ size = 240, strokeColor = 'rgb(107,114,128)', isScale =
   const elRef = useRef<HTMLCanvasElement>(null)
   const s = useMonitor()
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null)
-  const SIZE = s.width < 620 ? 142 : size
+  let SIZE = size
+  if (s.width < 400)
+    SIZE = 80
+  else if (s.width < 620)
+    SIZE = 142
 
   function init() {
     if (elRef.current === null) return
