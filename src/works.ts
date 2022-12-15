@@ -18,6 +18,9 @@ export const info = [
   {
     name: 'Deux',
   },
+  {
+    name: 'Spirograph',
+  },
 ]
 
 export default info.map((info, idx) => {
