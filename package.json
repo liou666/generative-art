@@ -1,16 +1,16 @@
 {
-  "name": "react-template",
+  "name": "generative-art",
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "description": "React Start Template",
+  "description": "Generative Art used React",
   "author": "Liou (https://github.com/liou666)",
   "license": "MIT",
   "keywords": [
     "react",
     "vite",
-    "windicss",
-    "iconify"
+    "canvas",
+    "generative"
   ],
   "main": "index.js",
   "engines": {
